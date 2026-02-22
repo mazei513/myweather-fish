@@ -4,6 +4,21 @@ Will get a 7-day weather forecast from data.gov.my API and prints it out. As per
 [documentation](https://developer.data.gov.my/realtime-api/weather), the data only updates once a
 day. This function will try to reuse the current day's response.
 
+```
+# Columns are date, morning, afternoon, night, min temp, max temp
+> myweather
+2026-02-28 ☀️ ☀️ ☀️ 23 33
+2026-02-27 🌧️ ⛈️ ☀️ 23 33
+2026-02-26 ☀️ ☀️ ☀️ 23 33
+2026-02-25 ☀️ ⛈️ ☀️ 23 33
+2026-02-24 ☀️ ⛈️ ⛈️ 23 33
+2026-02-23 ☀️ ☀️ 🌧️ 23 33
+2026-02-22 ☀️ ⛈️ 🌧️ 23 33
+```
+
+It's a 16 line function, modify it to suit your needs, e.g. add `sort` on the output to have it
+be ascending.
+
 ## Installation
 
 Apart from GNU tools, `curl` and `jq` is required.
