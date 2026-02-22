@@ -16,7 +16,7 @@ day. This function will try to reuse the current day's response.
 2026-02-22 ☀️ ⛈️ 🌧️ 23 33
 ```
 
-It's a 18 line function, modify it to suit your needs, e.g. add `sort` on the output to have it
+It's an 18 line function, modify it to suit your needs, e.g. add `sort` on the output to have it
 be ascending.
 
 ## Installation
