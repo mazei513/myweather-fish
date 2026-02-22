@@ -4,9 +4,23 @@ Will get a 7-day weather forecast from data.gov.my API and prints it out. As per
 [documentation](https://developer.data.gov.my/realtime-api/weather), the data only updates once a
 day. This function will try to reuse the current day's response.
 
-## Dependencies
+## Installation
 
 Apart from GNU tools, `curl` and `jq` is required.
+
+It's a single file, copy/download it and place it in `~/.config/fish/functions/myweather.fish`.
+
+```fish
+# install deps with package manager
+sudo apt install curl jq # Debian/Ubuntu
+sudo dnf install curl jq # Fedora/RHEL
+sudo pacman -S curl jq # Arch
+yay -S curl jq # Arch with yay
+
+# download script
+curl https://raw.githubusercontent.com/mazei513/myweather-fish/refs/heads/main/myweather.fish > /
+  ~/.config/fish/functions/myweather.fish
+```
 
 ## Setting up location ID
 
