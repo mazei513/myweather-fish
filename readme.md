@@ -33,8 +33,7 @@ sudo pacman -S curl jq # Arch
 yay -S curl jq # Arch with yay
 
 # download script
-curl https://raw.githubusercontent.com/mazei513/myweather-fish/refs/heads/main/myweather.fish > /
-  ~/.config/fish/functions/myweather.fish
+curl https://raw.githubusercontent.com/mazei513/myweather-fish/refs/heads/main/myweather.fish > ~/.config/fish/functions/myweather.fish
 ```
 
 ## Setting up location ID
@@ -43,8 +42,8 @@ The location ID needs to be set in `~/.config/myweather/loc_id`. To get a list o
 the following:
 
 ```fish
-curl -s -L 'https://api.data.gov.my/weather/forecast' | /
-  jq '[.[].location | {\"key\": .location_id, \"value\": .location_name}] | from_entries'
+curl -s -L 'https://api.data.gov.my/weather/forecast' | \
+  jq '[.[].location | {"key": .location_id, "value": .location_name}] | from_entries'
 ```
 
 Then store the location ID into `~/.config/myweather/loc_id`.
